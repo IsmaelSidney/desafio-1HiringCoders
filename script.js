@@ -5,7 +5,22 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     let email = document.getElementById('email').value;
     localStorage.setItem("email",email)
+    document.getElementById('email').value = '';
     
+    const loader = document.getElementById('loader')
+    
+    loader.classList.add('loader')
+    let carregando = `<img src="assets/loader.gif" alt="" srcset="">`
+    loader.innerHTML = carregando
+
+    setTimeout(()=>{       
+            loader.innerHTML =`<p style="color: black; font-size:20px">Cadastro realizado com sucesso! Aguarde novidades</p>`;
+            
+    },2000) 
+    setTimeout(()=>{       
+        loader.classList.remove('loader')
+},4000) 
+
 })
 function finish(){
     var now = new Date().getTime();
