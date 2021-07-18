@@ -176,6 +176,7 @@ input[type="submit"]:hover{
         max-width: 100%;
         flex-direction: column;
         height: auto;
+        position: relative;
     }
     .title{
         font-size: 15px;
@@ -189,6 +190,13 @@ input[type="submit"]:hover{
         border-radius: 15px;
         padding-left: 10px;
         margin-bottom: 5px;
+    }
+    .loader{
+        max-width: 100%;  
+        height: auto;
+        position: absolute; 
+        bottom: -130%; 
+        left: 15%;    
     }
 }
 
